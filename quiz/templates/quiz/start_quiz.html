@@ -1,0 +1,12 @@
+{% extends 'quiz/base.html' %}
+{% block title %} Интерактивный квиз {% endblock %}
+{% block content %}
+    <div>
+        <h1>Добро пожаловать в интерактивный квиз!</h1>
+        <h3>Чтобы приступить к прохождению викторины нажми кнопку "Начать квиз"</h3>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Начать квиз</button>
+        </form>
+    </div>
+{% endblock %}

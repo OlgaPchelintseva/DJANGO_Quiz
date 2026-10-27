@@ -1,0 +1,13 @@
+{% extends 'quiz/base.html' %}
+{% block title %} Итоговый результат {% endblock %}
+{% block content %}
+    <div>
+        <h1>Итоговый счет:</h1>
+        <h3>Правильных ответов {{ score }} из {{ all_questions }}</h3>
+        <form method="post">
+            {% csrf_token %}
+            <p>Чтобы ответить на вопросы еще раз, нажми "Пройти заново"</p>
+            <button type="submit">Пройти заново</button>
+        </form>
+    </div>
+{% endblock %}
